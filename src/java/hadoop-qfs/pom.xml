@@ -1,0 +1,46 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <parent>
+    <groupId>com.quantcast.qfs</groupId>
+    <artifactId>qfs</artifactId>
+    <version>1.0.0</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.quantcast.qfs</groupId>
+  <artifactId>hadoop-qfs</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0.0</version>
+  <name>hadoop-qfs</name>
+  <url>http://quantcast.github.com/qfs</url>
+
+  <properties>
+    <hadoop.release.version>2.0.2-alpha</hadoop.release.version>
+  </properties>
+
+  <build>
+    <resources>
+      <resource>
+        <directory>../qfs-access/target/classes/</directory>
+      </resource>
+    </resources>
+  </build>
+  
+  <dependencies>
+    <dependency>
+      <groupId>org.apache.hadoop</groupId>
+      <artifactId>hadoop-common</artifactId>
+      <version>${hadoop.release.version}</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.quantcast.qfs</groupId>
+      <artifactId>qfs-access</artifactId>
+      <version>1.0.0</version>
+      <scope>compile</scope>
+    </dependency>
+
+  </dependencies>
+ 
+</project>
