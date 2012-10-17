@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE ivy-module [
-    <!ENTITY hadoop.release.version "2.0.2-alpha">
+    <!ENTITY hadoop.release.version "1.0.2">
 ]>
 <ivy-module version="2.0"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -10,7 +10,7 @@
         revision="&hadoop.release.version;"/>
 
   <dependencies>
-    <dependency org="org.apache.hadoop" name="hadoop-common" rev="&hadoop.release.version;"/>
+    <dependency org="org.apache.hadoop" name="hadoop-core" rev="&hadoop.release.version;"/>
   </dependencies>
 </ivy-module>
 
