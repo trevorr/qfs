@@ -16,7 +16,7 @@ fi
 if which mvn > /dev/null; then
     echo "Using Apache Maven to build QFS jars.."
 else
-    echo "Skipping Java build of QFS. Install Apache Maven and try again." 
+    echo "Skipping Java build of QFS. Install Apache Maven and try again."
     exit 0
 fi
 
@@ -52,4 +52,4 @@ if [ x"$hadoop_qfs_profile" = x'none' ]; then
 else
     echo "Running: mvn -P $hadoop_qfs_profile -Dqfs.release.version=$qfs_release_version -Dqfs.source.revision=$qfs_source_revision -Dhadoop.release.version=$1 package"
     mvn -P $hadoop_qfs_profile -Dqfs.release.version=$qfs_release_version -Dqfs.source.revision=$qfs_source_revision -Dhadoop.release.version=$1 package
-fi 
+fi

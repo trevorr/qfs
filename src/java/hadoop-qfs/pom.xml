@@ -40,7 +40,7 @@
       </plugin>
     </plugins>
   </build>
- 
+
   <profiles>
     <profile>
       <id>hadoop_trunk_profile</id>
@@ -77,5 +77,5 @@
       </dependencies>
     </profile>
   </profiles>
- 
+
 </project>
