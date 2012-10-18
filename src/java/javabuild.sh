@@ -26,9 +26,9 @@ if [ $# -eq 1 ]; then
     if [ x"$1" = x'clean' ]; then
         mvn clean
         exit 0
-    elif [[ "$1" == 1.0.* || "$1" == 1.1.* ]]; then
+    elif [[ $(echo $1 | cut -d. -f 1-2) == "1.0"  || $(echo $1 | cut -d. -f 1-2) == "1.1" ]]; then
         hadoop_qfs_profile="hadoop_branch1_profile"
-    elif [[ "$1" == 0.23.* || "$1" == 2.* ]]; then
+    elif [[ $(echo $1 | cut -d. -f 1-2) == "0.23" || $(echo $1 | cut -d. -f 1) == "2" ]]; then
         hadoop_qfs_profile="hadoop_trunk_profile"
     else
         echo "Unsupported Hadoop release version."
