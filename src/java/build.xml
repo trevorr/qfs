@@ -1,4 +1,7 @@
-<project xmlns:ivy="antlib:org.apache.ivy.ant" name="qfs" default="compile" basedir="."> 
+<project xmlns:ivy="antlib:org.apache.ivy.ant"
+         name="qfs"
+         default="compile"
+         basedir=".">
 
   <property name="build.dir" value="${basedir}/../../build"/>
   <property name="build.classes" value="${build.dir}/classes"/>
@@ -8,7 +11,8 @@
   <property name="hadoop.src.dir" value="${basedir}/hadoop-qfs/src/main/java"/>
   <property name="access.build.classes" value="${build.classes}/qfs-access"/>
   <property name="hadoop.build.classes" value="${build.classes}/hadoop-qfs"/>
-  
+  <property name="hadoop.release.version" value="1.0.0"/>
+
   <exec executable="sh" outputproperty="version">
     <arg value="${basedir}/../cc/common/buildversgit.sh"/>
     <arg value="-v"/>
