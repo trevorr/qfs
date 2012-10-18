@@ -8,6 +8,11 @@ if [ $# -eq 1 -a x"$1" = x'-h' ]; then
     exit 0
 fi
 
+cd "`dirname "$0"`"
+if [ $? -ne 0 ]; then
+    exit 1
+fi
+
 if which mvn > /dev/null; then
     echo "Using Apache Maven to build QFS jars.."
 else
@@ -31,9 +36,8 @@ if [ $# -eq 1 ]; then
     fi
 fi
 
-cwd=$(dirname "$0")
-qfs_release_version=$(sh $cwd/../cc/common/buildversgit.sh -v | head -1)
-qfs_source_revision=$(sh $cwd/../cc/common/buildversgit.sh -v | tail -1)
+qfs_release_version=$(sh ../cc/common/buildversgit.sh -v | head -1)
+qfs_source_revision=$(sh ../cc/common/buildversgit.sh -v | tail -1)
 if [ -z "$qfs_source_revision" ]; then
     qfs_source_revision="00000000"
 fi
