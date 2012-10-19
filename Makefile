@@ -83,10 +83,10 @@ tarball: hadoop-jars
 	mkdir "tmpreldir/$$tarname" && \
 	cp -r release/bin release/lib release/include ../scripts ../webui \
 	     ../examples ../benchmarks "tmpreldir/$$tarname/" && \
-	if ls -1 ./java/qfs-access-*.jar > /dev/null 2>&1; then \
-	    cp ./java/qfs-access*.jar "tmpreldir/$$tarname/lib/"; fi && \
-	if ls -1 ./java/hadoop-*.jar > /dev/null 2>&1; then \
-	    cp ./java/hadoop-*.jar "tmpreldir/$$tarname/lib/"; fi && \
+	if ls -1 ./java/qfs-access/qfs-access-*.jar > /dev/null 2>&1; then \
+	    cp ./java/qfs-access/qfs-access*.jar "tmpreldir/$$tarname/lib/"; fi && \
+	if ls -1 ./java/hadoop-qfs/hadoop-*.jar > /dev/null 2>&1; then \
+	    cp ./java/hadoop-qfs/hadoop-*.jar "tmpreldir/$$tarname/lib/"; fi && \
 	tar cvfz "$$tarname".tgz -C ./tmpreldir "$$tarname" && \
 	rm -rf tmpreldir
 
