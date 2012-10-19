@@ -28,7 +28,7 @@ qfs-access and hadoop-qfs sub modules. In most cases, doing one of the
 following is sufficient:
 
   * Run './javabuild.sh' to build only the qfs-access.
-  * Run './havabuild.sh <hadoop-version>' (eg: './javabuild.sh 2.0.2-alpha') to
+  * Run './javabuild.sh <hadoop-version>' (eg: './javabuild.sh 2.0.2-alpha') to
     build qfs-access as well as hadoop-qfs JARs.
 
 The build classes and JARs are created under <srcdir>/build/java.
